@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id = "@+id/main1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/yearSpinner"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:contentDescription="year" />
+
+        <Spinner
+            android:id="@+id/monthSpinner"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:contentDescription="month" />
+
+        <Spinner
+            android:id="@+id/daySpinner"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:contentDescription="day" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id = "@+id/main2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/emotionSpinner"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:contentDescription="feelings"
+            android:src="@drawable/ic_baseline_sentiment_satisfied_24" />
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/activitySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:contentDescription="activity"
+                android:padding="10dp" />
+
+            <Spinner
+                android:id="@+id/colorSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:contentDescription="color"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="등록"
+            android:textSize="15dp"
+            app:backgroundTint="#A9B0B3" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
